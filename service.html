@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - [Gallery Name]</title>
+    <style>
+        body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+header, footer {
+  background-color: #f1f1f1;
+  padding: 1rem;
+}
+
+.services-accordion {
+  margin: 2rem auto;
+  width: 60%;
+  max-width: 500px;
+}
+
+.accordion {
+  background-color: #eee;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.active, .accordion:hover {
+  background-color: #ddd;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.active .panel {
+  display: block;
+  max-height: 200px; /* Adjust this value as needed */
+}
+
+    </style>
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <header>
+        </header>
+
+    <main>
+        <h1>Our Services</h1>
+
+        <section class="services-accordion">
+            <button class="accordion">Art Appraisals</button>
+            <div class="panel">
+                <p>
+                    [Gallery Name] offers professional art appraisals by experienced specialists. We can help you determine the value of your artwork for insurance purposes, estate planning, or potential sale.
+                </p>
+            </div>
+
+            <button class="accordion">Art Consulting</button>
+            <div class="panel">
+                <p>
+                    Our knowledgeable art consultants can assist you in building your art collection, finding specific pieces, or navigating the art market. We offer personalized advice tailored to your budget and taste.
+                </p>
+            </div>
+
+            <button class="accordion">Framing & Restoration</partner>
+            <div class="panel">
+                <p>
+                    We provide high-quality framing and restoration services to preserve and enhance your artwork. Our skilled staff can handle a variety of framing styles and restoration needs.
+                </p>
+            </div>
+
+            </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script>
+       const accordions = document.querySelectorAll('.accordion');
+
+accordions.forEach(accordion => {
+  accordion.addEventListener('click', function() {
+    this.classList.toggle('active');
+    const panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+});
+
+    </script>
+</body>
+
+</html>
